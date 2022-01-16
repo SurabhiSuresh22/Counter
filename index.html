@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Counter App</h1>
+            <p class="count">100</p>
+            <button><div class="image"><img src="plus.png"><div class="text1">Increment</div></div></button><br>
+            <button><div class="image"><img src="minus.png"><div class="text2">Decrement</div></div></button>
+        </div>
+    </div>   
+</body>
+    <script>
+        var c = document.querySelector(".count");
+        let count = 1;
+
+        setInterval(()=>{
+            if(count < 100){
+            count++;
+            c.innerText = count;
+        }
+        },100)
+
+        var inc = document.querySelector(".text1");
+        var dec = document.querySelector(".text2");
+
+        inc.addEventListener('click',()=>{
+            var num = c.innerText;
+            num ++;
+            c.innerText =  num ;
+        });
+        dec.addEventListener('click',()=>{
+            var num = c.innerText;
+            num--;
+            c.innerText = num;
+        })
+    </script>
+</html>
